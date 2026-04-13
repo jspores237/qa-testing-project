@@ -1,0 +1,210 @@
+Test Case ID: TC-001
+
+Title: Valid Login with registered user credentials
+
+Preconditions:
+User account exists with email: testuser@gmail.com
+
+Steps:
+1.	Navigate to login page
+2.	Enter email testuser@gmail.com
+3.	Enter password: password123
+4.	Click login
+
+Expected Result:
+User is successfully logged in and redirected to dashboard
+
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-002
+
+Title: Login attempt with incorrect password
+
+Preconditions:
+User account exists with email: testuser@gmail.com 
+
+Steps:
+1.	Navigate to login page
+2.	Enter email testuser@gmail.com
+3.	Enter password: wrongPassword123
+4.	Click “Login”
+
+Expected Result:
+Error message is displayed: "Invalid email or password" 
+User remains on login page 
+
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-003  
+Title: Login attempt with unregistered email  
+
+Preconditions:
+User account does NOT exist with email: fakeuser@gmail.com  
+
+Steps:
+1. Navigate to login page  
+2. Enter email: fakeuser@gmail.com  
+3. Enter password: Password123  
+4. Click "Login"  
+
+Expected Result:
+Error message is displayed indicating invalid credentials  
+User remains on login page  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-004  
+Title: Login attempt with empty email field  
+
+Preconditions:
+User is on login page  
+
+Steps:
+1. Leave email field empty  
+2. Enter password: Password123  
+3. Click "Login"  
+
+Expected Result:
+Validation error message appears for email field  
+User is not logged in  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-005  
+Title: Login attempt with empty password field  
+
+Preconditions:
+User is on login page  
+
+Steps:
+1. Enter email: testuser@gmail.com  
+2. Leave password field empty  
+3. Click "Login"  
+
+Expected Result:
+Validation error message appears for password field  
+User is not logged in  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-006  
+Title: Login attempt with both fields empty  
+
+Preconditions:
+User is on login page  
+
+Steps:
+1. Leave email field empty  
+2. Leave password field empty  
+3. Click "Login"  
+
+Expected Result:
+Validation error messages appear for both fields  
+User is not logged in  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-007  
+Title: Login attempt with invalid email format  
+
+Preconditions:
+User is on login page  
+
+Steps:
+1. Enter email: testuser  
+2. Enter password: Password123  
+3. Click "Login"  
+
+Expected Result:
+Validation error message appears for invalid email format  
+User is not logged in  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-008  
+Title: Login attempt with leading/trailing spaces  
+
+Preconditions:
+User account exists with email: testuser@gmail.com  
+
+Steps:
+1. Enter email: "  testuser@gmail.com  "  
+2. Enter password: Password123  
+3. Click "Login"  
+
+Expected Result:
+System trims spaces and logs user in successfully  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-009  
+Title: Login attempt with excessively long email input  
+
+Preconditions:
+User is on login page  
+
+Steps:
+1. Enter email with 200+ characters  
+2. Enter password: Password123  
+3. Click "Login"  
+
+Expected Result:
+System handles input gracefully (validation error or rejection)  
+No crash or unexpected behavior occurs  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-010  
+Title: Multiple failed login attempts  
+
+Preconditions:
+User account exists  
+
+Steps:
+1. Enter valid email  
+2. Enter incorrect password  
+3. Click "Login"  
+4. Repeat steps 1–3 five times  
+
+Expected Result:
+Account is temporarily locked OR warning message displayed  
+System prevents further attempts based on security rules  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-011  
+Title: Email case sensitivity check  
+
+Preconditions:
+User account exists with email: testuser@gmail.com  
+
+Steps:
+1. Enter email: TESTUSER@GMAIL.COM  
+2. Enter password: Password123  
+3. Click "Login"  
+
+Expected Result:
+User is successfully logged in (email should be case-insensitive)  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-012  
+Title: Password field masking  
+
+Preconditions:
+User is on login page  
+
+Steps:
+1. Enter password into password field  
+
+Expected Result:
+Password is masked (displayed as dots or asterisks)  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-013  
+Title: Page refresh during login  
+
+Preconditions:
+User is on login page  
+
+Steps:
+1. Enter email and password  
+2. Refresh the page  
+
+Expected Result:
+Fields are cleared OR reset appropriately  
+No unexpected behavior occurs  
+---------------------------------------------------------------------------------------------------------------------
+Test Case ID: TC-014  
+Title: Login button behavior  
+
+Preconditions:
+User is on login page  
+
+Steps:
+1. Observe login button with empty fields  
+2. Enter valid email and password  
+
+Expected Result:
+Login button is disabled when fields are empty  
+Login button becomes enabled when fields are filled  
+---------------------------------------------------------------------------------------------------------------------
