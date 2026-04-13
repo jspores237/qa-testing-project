@@ -1,0 +1,118 @@
+Bug ID: BUG-001  
+Title: Login fails when email contains leading/trailing spaces  
+
+Environment:
+Chrome browser (Version XX), macOS  
+
+Steps to Reproduce:
+1. Navigate to login page  
+2. Enter email: "  testuser@gmail.com  "  
+3. Enter password: Password123  
+4. Click "Login"  
+
+Expected Result:
+System trims whitespace and logs user in successfully  
+
+Actual Result:
+Login fails and displays "Invalid email or password"  
+
+Severity:
+Medium  
+
+Priority:
+Medium  
+
+Bug ID: BUG-002  
+Title: No validation message displayed for empty email field  
+
+Environment:
+Chrome browser, Windows 11  
+
+Steps to Reproduce:
+1. Navigate to login page  
+2. Leave email field empty  
+3. Enter password: Password123  
+4. Click "Login"  
+
+Expected Result:
+Validation error message should appear indicating email is required  
+
+Actual Result:
+No error message is displayed and login attempt proceeds  
+
+Severity:
+High  
+
+Priority:
+High  
+
+---------------------------------------------------------------------------------------------------------------------
+Bug ID: BUG-003  
+Title: Application crashes when extremely long email is entered  
+
+Environment:
+Chrome browser, macOS  
+
+Steps to Reproduce:
+1. Navigate to login page  
+2. Enter email with 250+ characters  
+3. Enter password: Password123  
+4. Click "Login"  
+
+Expected Result:
+System should reject input with validation message  
+
+Actual Result:
+Page freezes and becomes unresponsive  
+
+Severity:
+Critical  
+
+Priority:
+High  
+
+---------------------------------------------------------------------------------------------------------------------
+Bug ID: BUG-004  
+Title: Login button remains enabled when input fields are empty  
+
+Environment:
+Chrome browser, Windows 11  
+
+Steps to Reproduce:
+1. Navigate to login page  
+2. Observe login button without entering any input  
+
+Expected Result:
+Login button should be disabled until required fields are filled  
+
+Actual Result:
+Login button is enabled and clickable  
+
+Severity:
+Medium  
+
+Priority:
+Low
+  
+---------------------------------------------------------------------------------------------------------------------
+Bug ID: BUG-005  
+Title: Password field displays plain text instead of masking input  
+
+Environment:
+Safari browser, macOS  
+
+Steps to Reproduce:
+1. Navigate to login page  
+2. Enter password into password field  
+
+Expected Result:
+Password should be masked (displayed as dots or asterisks)  
+
+Actual Result:
+Password is visible as plain text  
+
+Severity:
+High  
+
+Priority:
+High  
